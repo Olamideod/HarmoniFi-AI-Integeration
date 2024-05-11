@@ -36,37 +36,10 @@ function Recommendations() {
   };
 
   return (
-    <div style={{ fontFamily: 'Satoshi', textAlign: 'center', backgroundImage: 'url("https://i.ibb.co/NsvMf7W/IMG-8743.jpg")', backgroundSize: 'cover', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '2em' }}>
-      <h1 style={{ color: 'white', marginBottom: '1em', fontWeight: 'bold', fontSize: '2.4em' }}>Discover New Music with HarmoniFi</h1>
-      <select
-        value={selectedSong}
-        onChange={handleSongChange}
-        style={{ padding: '0.5em', width: '50%', marginBottom: '1em', color: 'black', border: '2px solid #ddd', borderRadius: '2px' }}
-      >
-        <option value="">Select a song</option>
-        {allSongs.map((song, index) => (
-          <option key={index} value={song}>{song}</option>
-        ))}
-      </select>
-      <button
-        onClick={handleRecommend}
-        style={{ padding: '0.5em 1em', backgroundColor: 'transparent', color: 'white', border: '1px solid #ccc', borderRadius: '2px', cursor: 'pointer', marginBottom: '1em' }}
-      >
-        Recommend 
-      </button>
-      <h2 style={{ color: 'white' }}>Recommended Songs</h2>
-
-      {/* Recommendation Display Section */}
-      {recommendations.songs.length > 0 && ( // Only render if recommendations exist
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-          {recommendations.songs.map((song, index) => (
-            <div key={index} style={{ margin: '1em', width: '200px', backgroundColor: '#f5f5f5', borderRadius: '5px', padding: '1em' }}>
-              <p style={{ fontWeight: 'bold' }}>{song}</p>
-              <img src={recommendations.posters[index]} alt={`Poster for ${song}`} style={{ width: '100%', maxWidth: '200px', marginBottom: '0.5em' }} />
-            </div>
-          ))}
-        </div>
-      )}
+    <div>
+      {recommendations.map((recommendation, index) => (
+        <p key={index}>{recommendation.title}</p>
+      ))}
     </div>
   );
 }

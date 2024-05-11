@@ -66,8 +66,11 @@ def get_recommendations():
     recommended_music_names, recommended_music_posters = recommend(song)
     return jsonify({"songs": recommended_music_names, "posters": recommended_music_posters})
 
-
-
+@app.route('/all_songs', methods=['GET'])
+def get_all_songs():
+    all_songs = music['song'].tolist()  # Get a list of all song names
+    return jsonify({"songs": all_songs})
 
 if __name__ == '__main__':
     app.run(debug=True)
+
