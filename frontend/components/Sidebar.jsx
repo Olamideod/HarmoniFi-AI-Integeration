@@ -48,7 +48,7 @@ const Sidebar = ({ view, setView, setGlobalPlaylistId }) => {
             <div className='space-y-4'>
                 <div className='mt-1 mb-5'>
                     {/* Replace the next line with your HarmoniFi image URL */}
-                    <img src="https://i.ibb.co/DD4bjCB/Harmoni-Fi-Brand-FInal.png" alt="HarmoniFi" className="text-white h-12 max-w-[820px]" />
+                    <img src="https://i.ibb.co/yWccgXy/logo.png" alt="HarmoniFi" className="text-white h-12 max-w-[820px]" />
                 </div>
 
 
