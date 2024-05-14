@@ -50,8 +50,8 @@ const HomePage = ({ setView, setGlobalPlaylistId, setGlobalCurrentSongId, setGlo
                 <p className='text-sm'>Logout</p>
                 <ChevronDownIcon className='h-5 w-5' />
             </div>
-           
-           
+            
+            
             <div class="hero primary-header group">
                 <div>
                     <h1 class="logo">
@@ -116,7 +116,7 @@ const HomePage = ({ setView, setGlobalPlaylistId, setGlobalCurrentSongId, setGlo
                 
                 </div>
                 <div class="sisde_wrapper">
-                <aside class="col-1-3">
+                   <aside class="col-1-3">
                         <div class="speaker-info">
                     
                             <img src="image.jpg" alt="Camera Man"></img>
@@ -134,6 +134,131 @@ const HomePage = ({ setView, setGlobalPlaylistId, setGlobalCurrentSongId, setGlo
                         </audio>
                     </aside>
                 </div>
+                <section class="section_wrapper hero">
+                    <div class="content_wrapper">
+                        <h1>Chika Igbokwe</h1>
+                       
+                        <h4>Going to Library</h4>
+                        <p>
+                            With the height and vertical alignment in place, let’s apply vertical margins 
+                            to the images. Using a negative 66-pixel margin on the top of the images, 
+                            we’ll pull them slightly out of the  element and make them vertically 
+                            centered with the top border of the element with a class attribute value 
+                            of speaker-info. Then, applying a 22-pixel margin on the bottom of the image 
+                            provides space between the image and the  element below it.
+                        </p>
+                        <h5>About Library</h5>
+                        
+                        <p>
+                            With the height and vertical alignment in place, let’s apply vertical margins 
+                            to the images. Using a negative 66-pixel margin on the top of the images, 
+                            we’ll pull them slightly out of the  element and make them vertically 
+                            centered with the top border of the element with a class attribute value 
+                            of speaker-info. Then, applying a 22-pixel margin on the bottom of the image 
+                            provides space between the image and the  element below it.
+                        </p>
+                        <table>
+                            <thead>
+                            <tr>
+                                <th scope="col" colspan="2">Item</th>
+                                <th scope="col">Qty</th>
+                                <th scope="col">Price</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Don&#8217;t Make Me Think by Steve Krug</td>
+                                <td>In Stock</td>
+                                <td>1</td>
+                                <td>$30.02</td>
+                            </tr>
+                            <tr>
+                                <td>A Project Guide to UX Design by Russ Unger &#38; Carolyn Chandler</td>
+                                <td>In Stock</td>
+                                <td>2</td>
+                                <td>$52.94 ($26.47 &#215; 2)</td>
+                            </tr>
+                            <tr>
+                                <td>Introducing HTML5 by Bruce Lawson &#38; Remy Sharp</td>
+                                <td>Out of Stock</td>
+                                <td>1</td>
+                                <td>$22.23</td>
+                            </tr>
+                            <tr>
+                                <td>Bulletproof Web Design by Dan Cederholm</td>
+                                <td>In Stock</td>
+                                <td>1</td>
+                                <td>$30.17</td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="3">Subtotal</td>
+                                <td>$135.36</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Tax</td>
+                                <td>$13.54</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Total</td>
+                                <td>$148.90</td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                        <input type="date" name="birthday"></input>
+                        <input type="time" name="game-time"></input>
+                        <input type="email" name="email-address"></input>
+                        <input type="url" name="website"></input>
+                        <input type="number" name="cost"></input>
+                        <input type="tel" name="phone-number"></input>
+                        <h5>About Library</h5>
+                        <section class="venue-theatre">
+
+                            <div class="col-1-3">
+                            <h2>Chicago Theatre</h2>
+                            <p>175 N State St <br></br> Chicago, IL 60601</p>
+                            <p><a href="http://www.nigeria.com/">thechicagotheatre.com</a> <br></br> (312) 462-6300</p>
+                            </div>----<iframe class="venue-map col-2-3" src="https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x880e2ca55810a493%3A0x4700ddf60fcbfad6!2schicago+theatre!5e0!3m2!1sen!2sus!4v1388701393606"></iframe>
+                        
+                        </section>
+                        <textarea name="comments" id="1" cols="30" rows="10">ejejje</textarea>
+                        <p>
+                            With the height and vertical alignment in place, let’s apply vertical margins 
+                            to the images. Using a negative 66-pixel margin on the top of the images, 
+                            we’ll pull them slightly out of the  element and make them vertically 
+                            centered with the top border of the element with a class attribute value 
+                            of speaker-info. Then, applying a 22-pixel margin on the bottom of the image 
+                            provides space between the image and the  element below it.
+                        </p>
+                    
+                    </div>
+                
+                    <div class="sisde_wrapper">
+                        <aside class="col-1-3">
+                            <div class="speaker-info">
+                        
+                            <img src="image.jpg" alt="Camera Man"></img>
+                            
+                            <ul>
+                                <li><a href="https://twitter.com/ogbonnaukah">@UkaOgbonna</a></li>
+                                <li><a href="http://learn.shayhowe.com/">learn.shayhowe.com</a></li>
+                            </ul>
+                        
+                            </div>
+                            <audio src="https://s3.yesstreaming.net:19000" controls></audio>
+                            
+                        </aside>
+                    </div>
+              
+                
+            </section>
+            <input type="date" name="birthday"></input>
+            <input type="time" name="game-time"></input>
+            <input type="email" name="email-address"></input>
+            <input type="url" name="website"></input>
+            <input type="number" name="cost"></input>
+            <input type="tel" name="phone-number"></input>
           
             </section>
             <footer class="hero primary-footer group">
@@ -147,7 +272,9 @@ const HomePage = ({ setView, setGlobalPlaylistId, setGlobalCurrentSongId, setGlo
                     <a href="view.html">View</a>
                 </nav>
             </footer>
+            
         </div>
+        
     );
 }
 
