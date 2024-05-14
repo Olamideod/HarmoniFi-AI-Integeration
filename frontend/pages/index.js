@@ -4,6 +4,7 @@ import Player from "@/components/Player"
 import PlaylistView from "@/components/PlaylistView"
 import Search from "@/components/Search"
 import Sidebar from "@/components/Sidebar"
+import HomePage from "@/components/HomePage"
 import { useSession } from "next-auth/react"
 import { useEffect, useState } from "react"
 
@@ -24,6 +25,13 @@ export default function Home() {
             setGlobalPlaylistId={setGlobalPlaylistId}
           />
           {view === "playlist" && <PlaylistView
+            setView={setView}
+            setGlobalArtistId={setGlobalArtistId}
+            globalPlaylistId={globalPlaylistId}
+            setGlobalCurrentSongId={setGlobalCurrentSongId}
+            setGlobalIsTrackPlaying={setGlobalIsTrackPlaying}
+          />}
+            {view === "homepage" && <HomePage
             setView={setView}
             setGlobalArtistId={setGlobalArtistId}
             globalPlaylistId={globalPlaylistId}

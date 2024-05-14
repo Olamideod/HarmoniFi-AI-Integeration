@@ -52,9 +52,9 @@ const Sidebar = ({ view, setView, setGlobalPlaylistId }) => {
                 </div>
 
 
-                <button onClick={() => setView("home")} className='flex items-center space-x-2 hover:text-white'>
+                <button onClick={() => setView("homepage")} className={`flex items-center space-x-2 hover:text-white ${view == "homepage" ? "text-white" : null}`}>
                      <HomeIcon className='h-5 w-5' />
-                     <p>Home</p>
+                     <p>Homepage</p>
                 </button>
                 <button onClick={() => setView("search")} className={`flex items-center space-x-2 hover:text-white ${view == "search" ? "text-white" : null}`}>
                     <MagnifyingGlassIcon className='h-5 w-5' />
