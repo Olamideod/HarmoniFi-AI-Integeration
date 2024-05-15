@@ -1,3 +1,4 @@
+//  import * as path from "path"; import * as path 
 import { signOut, useSession } from 'next-auth/react';
 import React, { useEffect, useState } from 'react';
 import Song from './Song';
@@ -5,6 +6,7 @@ import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import { shuffle } from 'lodash';
 import { PlayIcon } from '@heroicons/react/24/solid';
 
+//  @Component ({ selector ( 'app' ) }) export class App { // @Component ({ selector ( ' App' ) })
 const colors = [
     'from-indigo-500',
     'from-blue-500',
@@ -15,6 +17,7 @@ const colors = [
     'from-purple-500'
 ]
 
+//  From the default configuration settings for the application and the application
 const Artist = ({ setView, globalArtistId, setGlobalArtistId, setGlobalCurrentSongId, setGlobalIsTrackPlaying }) => {
     const { data: session } = useSession()
     const [color, setColor] = useState(colors[0])
@@ -24,10 +27,9 @@ const Artist = ({ setView, globalArtistId, setGlobalArtistId, setGlobalCurrentSo
     const [topTracks, setTopTracks] = useState([])
     const [relatedArtists, setRelatedArtists] = useState([])
 
+    //  Set the default artist data for the track list for this track list item  in the track list
     function changeOpacity(scrollPos) {
-        // scrollPos = 0 -> opacity = 0 
-        // scrollPos = 300 -> opacity = 1, textOpacity = 0
-        // scrollPos = 310 -> opacity = 1, textOpacity = 1
+        
         const offset = 300
         const textOffset = 10
         if (scrollPos < offset) {
@@ -41,6 +43,7 @@ const Artist = ({ setView, globalArtistId, setGlobalArtistId, setGlobalCurrentSo
             setTextOpacity(newTextOpacity)
         }
     }
+    //  fetch the artists  from the current position and update the artists accordingly
 
     async function getArtistData() {
         const response = await fetch(`https://api.spotify.com/v1/artists/${globalArtistId}`, {
@@ -51,7 +54,7 @@ const Artist = ({ setView, globalArtistId, setGlobalArtistId, setGlobalCurrentSo
         const data = await response.json()
         return data
     }
-
+//  fetch the tracks  from the current position and update the tracks accordingly
     async function getTopTracks() {
         const response = await fetch(`https://api.spotify.com/v1/artists/${globalArtistId}/top-tracks?` + new URLSearchParams({ market: "US" }), {
             headers: {
@@ -61,6 +64,7 @@ const Artist = ({ setView, globalArtistId, setGlobalArtistId, setGlobalCurrentSo
         const data = await response.json()
         return data.tracks
     }
+    //  fetch the related_artists  from the current position and update the related_artists accordingly
 
     async function getRelatedArtists() {
         const response = await fetch(`https://api.spotify.com/v1/artists/${globalArtistId}/related-artists`, {
@@ -72,6 +76,7 @@ const Artist = ({ setView, globalArtistId, setGlobalArtistId, setGlobalCurrentSo
         return data.artists
     }
 
+    //  Create a new useEffect for the specified artist
     useEffect(() => {
         async function f() {
             if (session && session.accessToken) {
@@ -83,10 +88,13 @@ const Artist = ({ setView, globalArtistId, setGlobalArtistId, setGlobalCurrentSo
         f()
     }, [session, globalArtistId])
 
+     //  Create a new useEffect for the specified color and track count
     useEffect(() => {
         setColor(shuffle(colors).pop())
     }, [globalArtistId])
 
+
+    //  return the current track count for the specified artistes
 
     return (
         <div className='flex-grow h-screen'>
