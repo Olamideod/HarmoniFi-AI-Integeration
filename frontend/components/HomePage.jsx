@@ -1,16 +1,20 @@
 
+// import or all the modules in the module cache that are not in the module cache
+
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { signOut, useSession } from 'next-auth/react';
 import React, { useEffect, useRef, useState } from 'react';
-import FeaturedPlaylists from './FeaturedPlaylists';
-import SearchResults from './SearchResults';
 
+
+//  declare function HomePage with parameters setView, setGlobalState
 const HomePage = ({ setView, setGlobalPlaylistId, setGlobalCurrentSongId, setGlobalIsTrackPlaying, setGlobalArtistId }) => {
+
     const { data: session } = useSession()
     const [searchData, setSearchData] = useState(null)
     const [inputValue, setInputValue] = useState('')
     const inputRef = useRef(null)
 
+    //  create async function that will be called when the user clicks on the search
     async function updateSearchResults(query) {
         const response = await fetch("https://api.spotify.com/v1/search?" + new URLSearchParams({
             q: query,
@@ -24,10 +28,13 @@ const HomePage = ({ setView, setGlobalPlaylistId, setGlobalCurrentSongId, setGlo
         setSearchData(data)
     }
 
+    //  Create a new useEffect object with the specified parameters
+
     useEffect(() => {
         inputRef.current.focus()
     }, [inputRef])
 
+    //  return a new useEffect object with the specified parameters and parameters values from the request object passed in the constructor function
     return (
         
         <div className=' flex-grow h-screen'>
