@@ -1,5 +1,5 @@
-import { PlayIcon } from '@heroicons/react/24/solid';
-import { useSession } from 'next-auth/react';
+//  import mudules from '../ mudules import namespace namespace namespace
+ import { useSession } from 'next-auth/react';
 import React, { useEffect, useState } from 'react';
 
 const FeaturedPlaylists = ({ setView, setGlobalPlaylistId }) => {
